@@ -1,0 +1,73 @@
+@media screen and (min-width:768px){
+    header{
+        nav{
+            .menuQuery{
+                background: rgba(0, 0, 0, 0);
+                height: 0;
+                h2{
+                    display: none;
+                }
+                i{
+                    display: none;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+@media screen and (min-width:1200px){
+    header{
+        background-size: 100%;
+        background-position: unset;
+        .buttonMenu{
+            div{
+                &:last-child{
+                    margin-left: 1rem;
+                    p{
+                        line-height: 3rem;
+                    }
+                }
+            }
+        }
+        .titre, form, .buttonMenu{
+            width: 50%;
+            margin: 0 auto;
+        }
+        form{
+            height: calculRem(360px);
+            .formPoss{
+                flex-direction: row;
+                div{
+                    margin-right: 1rem;
+                } 
+            }
+            button{
+                width: 50%;
+            }
+        }
+    }
+    section{
+        img{
+            height: 70%;
+        }
+        .actu, .mat{
+            flex-direction: row;
+        }
+        .card{
+            margin: 0 3rem 1rem 3rem;
+        }
+    }
+    .popPerturbation{
+        overflow-y: hidden;
+        img{
+            width: 50%;
+        }
+        .message{
+            width: 50%;
+        }
+    }
+}

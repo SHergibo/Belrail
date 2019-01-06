@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
+
+.navScroll{
+    background: #000000;
+    h2{
+        display: block !important;
+    }
+    ul{
+        padding: .5rem 0;
+        transition: 0.5s;
+    }
+}
+
+header{
+    background: url('../img/background-header.jpeg') no-repeat;
+    background-size: 200% 100%;
+    background-position: 50%;
+    padding-bottom: 3rem;
+    nav{
+        position: fixed;
+        width: 100%;
+        z-index: 400;
+        background: rgba(0, 0, 0, 0.4);
+        color: #ffffff;
+        a{
+            color: #ffffff;
+        }
+        .menuQuery{
+            background: rgba(0, 0, 0, 0.4);
+            height: calculRem(65px);
+            h2{
+                position: absolute;
+                margin: 0;
+                top: 0;
+                left: 1rem;
+                padding: 1.2rem 0
+            }
+            i{
+                font-size: 1.5rem;
+                position: absolute;
+                margin: 0;
+                top: 0;
+                right: 1rem;
+                padding: 1.2rem 0
+            }
+        }
+        
+    }
+    ul{
+        display: none;
+        padding: 1rem 0;
+        margin: 0;
+        list-style: none;
+        justify-content: flex-end;
+        flex-direction: column;
+        transition: .5s;
+        float: right;
+        cursor: pointer;
+        li{
+            
+            padding: .5rem 0;
+            width: calculRem(183px);
+            i{
+                font-size: 2rem;
+                float: left;
+                padding-right: calculRem(10px);
+            }
+            a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;   
+            }
+            &:hover{
+                font-weight: 900;
+                transition: .5s;
+            }
+        }
+    }
+    p, h1{
+        color: #ffffff;
+    }
+    p{
+        margin: 0;
+    }
+    h1{
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+    .buttonMenu{
+        display: flex;
+        justify-content: flex-start;
+        cursor: pointer;
+        div{
+            font-weight: 300;
+            width: 15rem;
+            height: 3rem;
+            p{
+                color: #000000;
+                line-height: 3rem;
+                text-align: center;
+            }
+            &:last-child{
+                p{
+                    line-height: 1.5rem;
+                }
+            }
+        }
+        .inUse{
+            background: #ffffff;
+        }
+        .notInUse{
+            background: #E5E5E5;
+            border-bottom: 1px solid #cecece;
+        }
+    }
+    .titre, form, .buttonMenu{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .titre{
+        padding-top: 10rem;
+    }
+    .ferroviaire{
+        label{
+            width: 9rem;
+        }
+        input{
+            margin-right: 1rem;
+        }
+        button{
+            margin-top: 2rem;
+        }
+    }
+    form{
+        background: #ffffff;
+        padding: 3rem 3rem 1.5rem 3rem;
+        height: 500px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.204);
+        .formPoss{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            input{
+                width: 100%;
+            }
+        }
+        .bar, .bar2{
+            position: relative;
+            display: block;
+            &:before, &:after{
+                content:'';
+                height: 2px; 
+                width: 0;
+                bottom: 0; 
+                position: absolute;
+                background: #5264AE; 
+                transition: 0.2s ease all;
+            }   
+        }
+        .bar{
+            &:before{
+                left: 0;
+            }
+            &:after{
+                right: 0;
+            }
+        }
+        .bar2{
+            &:before{
+                left: 0;
+            }
+            &:after{
+                right: 0;
+            }
+        }
+        label{
+            font-weight: bold;
+            width: 3rem;
+            display: inline-block;
+        }
+        input{
+            margin-right: 2rem;
+            border: none;
+            border-bottom: 1px solid #000000;
+            line-height: 1.5rem;
+            outline: none;
+            &:focus ~ .bar:before, &:focus ~ .bar:after{
+                width: 50%;
+            }
+            &:focus ~ .bar2:before, &:focus ~ .bar2:after{
+                width: 50%;
+            }
+        }
+        div{
+            padding-bottom: 1rem;
+        }
+        .radioCheck{
+            padding-top: .5rem;
+            input{
+                margin: 0 .5rem;
+            }
+        }
+        button{
+            margin: 0 auto;
+            display: block;
+            background: #4793DA;
+            width: 100%;
+            height: 3rem;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        a{
+            display: block;
+            margin: .6rem auto 0 auto;
+            color: #4793DA;
+            text-align: center;
+        }
+    }
+
+    .container {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: .5rem;
+        margin-right: 2.5rem;
+        cursor: pointer;
+        line-height: 1.5rem;
+        user-select: none;
+    }
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: calculRem(25px);
+        width: calculRem(25px);
+        background-color: #eee;
+        border-radius: 50%;
+    }
+    .container:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+    .container input:checked ~ .checkmark {
+        border: 2px solid #4793DA;
+    }
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    .container input:checked ~ .checkmark:after {
+        display: block;
+    }
+    .container .checkmark:after {
+        top: 3px;
+        left: 3px;
+        width: calculRem(15px);
+        height: calculRem(15px);
+        border-radius: 50%;
+        background: #4793DA;
+    }
+}

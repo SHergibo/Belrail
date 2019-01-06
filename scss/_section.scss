@@ -1,0 +1,50 @@
+section{
+    width: 90%;
+    margin: 0 auto;
+    h2{
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .actu, .mat{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        position: relative;
+        width: 100%;
+        margin-bottom: 1rem;
+        background: #ffffff;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.204);
+        text-align: center;
+        transition: .5s;
+        h3{
+            margin: 0;
+        }
+        p{
+            margin: 0;
+            padding: 2rem;
+        }
+        div{
+            height: 30%;
+        }
+        &:hover{
+            transform: translate(10px, -10px);
+            transition: .5s;
+        }
+    }
+    .vPlus{
+        margin-top: 2rem;
+        line-height: 3rem;
+        text-align: center;
+        background: #ffffff;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.204);
+        color: #000000;
+        font-weight: 700;
+    }
+}

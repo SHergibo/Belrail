@@ -1,0 +1,30 @@
+.popPerturbation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    padding-top: 5rem;
+    text-align: center;
+    background: rgba(128, 128, 128, 0.582);
+    overflow-y: scroll;
+    img{
+        width: 100%;
+    }
+    .message{
+        background: #ffffff;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3rem;
+        font-weight: 800;
+    }
+    #close{
+        color: #ffffff;
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        right: 1.5rem;
+        cursor: pointer;
+    }
+}

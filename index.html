@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Bienvenue sur BelRail</title>
+</head>
+<body>
+    <header id="accueil">
+        <nav>
+            <div class="menuQuery">
+            <a href="#accueil"><h2>BelRail</h2></a>
+            <i class="fas fa-bars menuDisplayBelrail"></i>
+            </div>
+            <ul id="menuBelrail">
+                <li id="anchorActu"><a href="#actualites"><i class="far fa-newspaper"></i> Actualités du rail</a></li>
+                <li id="anchorMat"><a href="#materiel"><i class="fas fa-train"></i> Matériel roulant & Fiches techniques</a></li>
+                <li id="perturbation"><i class="fas fa-exclamation-triangle"></i> Perturbations sur le réseau</li>
+            </ul>
+            
+        </nav>
+
+        <div class="titre">
+            <p>Bienvenue sur</p>
+            <h1>BelRail</h1>
+        </div>
+
+        <div class="buttonMenu">
+            <div class="horaire inUse">
+                <p>Planifiez mon trajet</p>
+            </div>
+            <div class="flotte notInUse">
+                <p>Découvrez la flotte ferroviaire</p>
+            </div>
+        </div>
+
+        <form class="block">
+            <div class="formPoss">
+                <div>
+                    <label for="de">de:</label>
+                    <input type="text" id="de" placeholder="Gare, arrêt ou adresse" required>
+                    <span class="bar"></span>
+                </div>
+                <div>
+                    <label for="a">à:</label>
+                    <input type="text" id="a" placeholder="Gare, arrêt ou adresse" required>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="formPoss">
+                <div>
+                    <label for="date">date:</label>
+                    <input type="text" id="date" spellcheck="false">
+                    <span class="bar"></span>
+                </div>
+                <div>
+                    <label for="heure">heure:</label>
+                    <input type="text" id="heure" spellcheck="false">
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="radioCheck">
+                <label for="depart" class="container">Départ
+                <input type="radio" name="DA" id="depart" checked>
+                <span class="checkmark"></span>
+                </label>
+                <label for="arrivee" class="container">Arrivée
+                <input type="radio" name="DA" id="arrivee">
+                <span class="checkmark"></span>
+                </label>
+            </div>
+            <button type="submit">Planifiez mon trajet</button>
+            <a href="#">Afficher les options supplémentaires</a>
+        </form>
+
+        <form class="ferroviaire none">
+            <div class="formPoss">
+                <div>
+                    <label for="type">Type de train:</label>
+                    <input type="text" id="type" placeholder="Type de train">
+                    <span class="bar2"></span>
+                </div>
+                <div>
+                    <label for="moteur">Moteur:</label>
+                    <input type="text" id="moteur" placeholder="Type de moteur">
+                    <span class="bar2"></span>
+                </div>
+            </div>
+            <div class="formPoss">
+                <div>
+                    <label for="debut">Mis en service:</label>
+                    <input type="text" id="debut" placeholder="Début">
+                    <span class="bar2"></span>
+                </div>
+                <div>
+                    <label for="fin">arrêt de production:</label>
+                    <input type="text" id="fin" placeholder="Fin">
+                    <span class="bar2"></span>
+                </div>
+            </div>
+            <button type="submit">Recherchez le train</button>
+            <a href="#">Afficher les options supplémentaires</a>
+        </form>
+    </header>
+
+    <div class="popPerturbation none">
+        <p id="close"><i class="fas fa-times"></i></p>
+        <p class="message"><i class="fas fa-exclamation-triangle"></i> Les perturbations en direct <i class="fas fa-exclamation-triangle"></i></p>
+        <img id="map" src="img/maptrain.PNG" alt="Pertubations">
+    </div>
+
+    <section id="actualites">
+        <h2>Actualités</h2>
+        <div class="actu">
+            <div class="card">
+                <img src="img/train1.jpg" alt="train">
+                <div>
+                    <h3>50 ans de rail en images</h3>
+                    <p>Venez en famille découvrir les plus belles locomotives qui ont fait l'histoire du rail Belge.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/train2.jpg" alt="train">
+                <div>
+                    <h3>Les excursions insolites</h3>
+                    <p>Venez en famille découvrir les plus belles locomotives qui ont fait l'histoire du rail Belge.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/train3.jpg" alt="train">
+                <div>
+                    <h3>La première classe le WIFI</h3>
+                    <p>Venez en famille découvrir les plus belles locomotives qui ont fait l'histoire du rail Belge.</p>
+                </div>
+            </div>
+        </div>
+        <div class="vPlus"><p>Voir plus</p></div>
+    </section>
+
+    <section id="materiel">
+        <h2>Matériel roulant et fiches techniques</h2>
+        <div class="mat">
+            <div class="card">
+                <img src="img/train4.jpg" alt="train">
+                <div>
+                    <h3>Micheline Modèle 1254</h3>
+                    <p>Venez en famille découvrir les plus belles locomotives qui ont fait l'histoire du rail Belge.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/train5.jpg" alt="train">
+                <div>
+                    <h3>Micheline Modèle 1254</h3>
+                    <p>Venez en famille découvrir les plus belles locomotives qui ont fait l'histoire du rail Belge.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/train6.png" alt="train">
+                <div>
+                    <h3>Micheline Modèle 1254</h3>
+                    <p>Venez en famille découvrir les plus belles locomotives qui ont fait l'histoire du rail Belge.</p>
+                </div>
+            </div>
+        </div>
+        <div class="vPlus"><p>Voir plus</p></div>
+        
+    </section>
+
+    <footer>
+        <p><a href="#">à propos de BelRail</a></p>
+        <p><a href="https://github.com/SHergibo/Belrail">Voir le code sur github</a></p>
+    </footer>
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
